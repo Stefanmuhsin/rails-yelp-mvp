@@ -1,0 +1,9 @@
+<div class='container d-flex justify-content-between align-items-center'>
+<h1>Restaurants</h1>
+<%= link_to 'Add a restaurant', new_restaurant_path%>
+</div>
+<ul>
+<% @restaurants.each do |restaurant|%>
+<li class="list-group-item"><%= link_to restaurant_path(restaurant) do%><%= restaurant.name %><% end %></li>
+<% end %>
+</ul>
